@@ -1,0 +1,164 @@
+/* 모바일용 CSS*/
+/* 모바일 - 컨텐츠 영역 CSS */
+.gallery_list img {
+    width: 100%;
+    max-width: 100%;
+    border-radius: 5px;
+    transition: all 0.4s;
+    -webkit-filter: grayscale(1);
+    filter: grayscale(1);
+}
+
+.gallery_list img:hover {
+    -webkit-filter: grayscale(0);
+    filter: grayscale(0);
+}
+
+.gallery_list li {
+    margin-top: 20px;
+}
+
+.gallery_list li:nth-child(1) {
+    margin-top: 0;
+}
+
+.content_row_2 {
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 0 40px 0;
+}
+
+.search_window {
+    width: 120px;
+    height: 28px;
+    font-size: 0.688em;
+    text-indent: 10px;
+}
+
+.search_select_box {
+    display: none;
+}
+
+.write_box a {
+    display: block;
+    background-color: #E65D5D;
+    width: 70px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    font-size: 0.813em;
+}
+
+.content_row_3 {
+    display: flex;
+    justify-content: center;
+}
+
+.content_row_3 a {
+    width: 26px;
+    height: 26px;
+    border: 1px solid #219AF7;
+    color: #219AF7;
+
+    text-align: center;
+    line-height: 26px;
+    transition: all 0.2s;
+}
+
+.content_row_3 a:hover {
+    background-color: #219AF7;
+    color: white;
+}
+
+.content_row_3 a:nth-of-type(2) {
+    margin: 0 6px;
+}
+
+.content_row_3 span {
+    width: 28px;
+    height: 28px;
+    text-indent: -9999px;
+}
+
+.content_row_3 span.list_prev_btn {
+    background: #2ECC71 url(../images/s_images/list_prev_btn.png) center center no-repeat;
+    margin-right: 10px;
+}
+
+.content_row_3 span.list_next_btn {
+    background: #2ECC71 url(../images/s_images/list_next_btn.png) center center no-repeat;
+    margin-left: 10px;
+}
+
+/* 태블릿용 CSS */
+@media all and (min-width: 768px) {
+    /* 태블릿 - 컨텐츠 영역 CSS */
+    .gallery_list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .gallery_list li {
+        width: 48%;
+    }
+
+    .gallery_list li:nth-child(2) {
+        margin-top: 0;
+    }
+
+    .search_select_box {
+        display: inline-block;
+        position: relative;
+    }
+
+    .search_select_box span {
+        display: inline-block;
+        width: 80px;
+        height: 30px;
+        font-size: 0.813em;
+
+        text-align: center;
+        line-height: 30px;
+        
+        background-color: #E65D5D;
+        color: white;
+
+        cursor: pointer;
+    }
+
+    .search_select_list {
+        display: none;
+        position: absolute;
+        top: 105%;
+        left: 0;
+        width: 100%;
+    }
+
+    .search_select_list li {
+        padding: 6px 0;
+        font-size: 0.75em;
+        text-indent: 10px;
+        
+        background-color: #E65D5D;
+        color: white;
+        cursor: pointer;
+    }
+
+    .search_select_box:hover .search_select_list {
+        display: block;
+    }
+}
+
+/* PC용 CSS */
+@media all and (min-width: 960px) {
+    /* PC - 컨텐츠 영역 CSS */
+    .gallery_list li {
+        width: 23%;
+    }
+
+    .gallery_list li:nth-child(3),
+    .gallery_list li:nth-child(4) {
+        margin-top: 0;
+    }
+}
